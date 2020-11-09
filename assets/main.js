@@ -31,6 +31,9 @@ var app = new Vue ({
                 this.img_index = (this.images.length - 1);
             }
         }
+
+
+
     }
 
 });

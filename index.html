@@ -15,18 +15,22 @@
             <div class="container">
 
                 <div class="wrapper">
+                    <!-- Previous Button -->
                     <div class="prev">
                         <i @click="prev" class="fas fa-arrow-circle-left fa-2x"></i>
                     </div>
+                    <!-- Sezione centrale -->
                     <div class="center">
                         <img :src="images[img_index]" alt="">
                         <div class="circles">
-                            <i class="fas fa-circle"></i>
+                            <i v-for="(img, index) in images" :class="index == img_index ? 'current_img' : ''" class="fas fa-circle"></i>
                         </div>
                     </div>
+                    <!-- Next Button -->
                     <div class="next">
                         <i @click="next" class="fas fa-arrow-circle-right fa-2x"></i>
                     </div>
+
                 </div>
             </div>
         </div>

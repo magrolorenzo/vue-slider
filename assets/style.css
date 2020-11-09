@@ -10,12 +10,10 @@
     margin: auto;
     height: 100vh;
     display: flex;
-    background: green;
 }
 
 .wrapper{
     height: 500px;
-    border: 1px solid black;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -43,4 +41,12 @@
 
 .center img{
     width: 100%;
+}
+
+.circles i{
+    margin: 5px;
+}
+
+.current_img{
+    color: coral;
 }
