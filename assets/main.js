@@ -3,6 +3,7 @@
 
 var app = new Vue ({
     el: "#root",
+
     data:{
         img_index: 0,
         images: [
@@ -11,11 +12,11 @@ var app = new Vue ({
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (3).jpg",
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (4).jpg",
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (5).jpg"
-        ],
-
+        ]
     },
 
     methods:{
+
         next: function(){
             if(this.img_index < (this.images.length - 1)){
                 this.img_index ++;
@@ -30,10 +31,24 @@ var app = new Vue ({
             } else{
                 this.img_index = (this.images.length - 1);
             }
+        },
+
+        change_img: function(){
+            setInterval(function(){
+                this.img_index++;
+                if(this.img_index == (this.images.length - 1) ){
+                    this.img_index = 0;
+                }
+            }, 1000)
         }
 
+    }, //Chiusura Methods
 
 
+    created() {
+        this.change_img();
+        console.log("AAAAAAAAAAAAAAAAAAAAA");
     }
+
 
 });
