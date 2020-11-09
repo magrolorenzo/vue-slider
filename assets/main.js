@@ -34,7 +34,7 @@ var app = new Vue ({
         },
 
         change_img: function(){
-            setInterval(function(){
+            setInterval(() => {  // setInterval(function(){  <---- se scrivo così non funziona .. ??
                 this.img_index++;
                 if(this.img_index == (this.images.length - 1) ){
                     this.img_index = 0;
@@ -42,12 +42,11 @@ var app = new Vue ({
             }, 1000)
         }
 
-    }, //Chiusura Methods
+    },  //Chiusura Methods
 
 
-    created() {
+    created:function() {
         this.change_img();
-        console.log("AAAAAAAAAAAAAAAAAAAAA");
     }
 
 
