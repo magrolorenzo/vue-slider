@@ -7,11 +7,11 @@ var app = new Vue ({
     data:{
         img_index: 0,
         images: [
-            "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (1).jpg",
-            "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (2).jpg",
-            "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (3).jpg",
-            "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (4).jpg",
-            "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (5).jpg"
+            "./img/img (1).jpg",
+            "./img/img (2).jpg",
+            "./img/img (3).jpg",
+            "./img/img (4).jpg",
+            "./img/img (5).jpg"
         ],
         t:0
     },
