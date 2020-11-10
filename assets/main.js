@@ -12,7 +12,8 @@ var app = new Vue ({
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (3).jpg",
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (4).jpg",
             "C:/Users/Lorenzo/Desktop/boolean/vue-slider/img/img (5).jpg"
-        ]
+        ],
+        t:0
     },
 
     methods:{
@@ -34,7 +35,7 @@ var app = new Vue ({
         },
 
         change_img: function(){
-            setInterval(() => {  // setInterval(function(){  <---- se scrivo così non funziona .. ??
+            this.t = setInterval(() => {  // setInterval(function(){  <---- se scrivo così non funziona .. ??
                 if(this.img_index == (this.images.length - 1) ){
                     this.img_index = 0;
                 }else {
@@ -47,6 +48,10 @@ var app = new Vue ({
 
         select_image: function(index){
             this.img_index = index;
+            // Al click sul pallino resetto il time interval
+            clearInterval(this.t);
+            // e lo riavvio a partire dall imaggine selezionata
+            this.change_img();
         }
 
     },  //Chiusura Methods
