@@ -23,7 +23,7 @@
                     <div class="center">
                         <img :src="images[img_index]" alt="">
                         <div class="circles">
-                            <i v-for="(img, index) in images" :class="index == img_index ? 'current_img' : ''" class="fas fa-circle"></i>
+                            <i v-for="(img, index) in images" :class="index == img_index ? 'current_img' : ''" class="fas fa-circle" @click="select_image(index)"></i>
                         </div>
                     </div>
                     <!-- Next Button -->

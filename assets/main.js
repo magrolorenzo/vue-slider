@@ -41,12 +41,15 @@ var app = new Vue ({
 
                     this.img_index++;
                 }
-                console.log(this.img_index);
+                // console.log(this.img_index);
             }, 1500)
+        },
+
+        select_image: function(index){
+            this.img_index = index;
         }
 
     },  //Chiusura Methods
-
 
     created:function() {
         this.change_img();
