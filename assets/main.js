@@ -24,6 +24,10 @@ var app = new Vue ({
             } else{
                 this.img_index = 0;
             }
+            // Al click sul pallino resetto il time interval
+            clearInterval(this.t);
+            // e lo riavvio a partire dall imaggine selezionata
+            this.change_img();
         },
 
         prev: function(){
@@ -32,6 +36,10 @@ var app = new Vue ({
             } else{
                 this.img_index = (this.images.length - 1);
             }
+            // Al click sul pallino resetto il time interval
+            clearInterval(this.t);
+            // e lo riavvio a partire dall imaggine selezionata
+            this.change_img();
         },
 
         change_img: function(){
